@@ -1,0 +1,29 @@
+GrandNationalHorse horsesTest = new GrandNationalHorse();         //creates an instance of NationalHorse
+
+horsesTest.horsesDemo();                                          
+// tests if the horsesDemo method creates 
+                                                                     //a map of keys as years when
+                                                                    // a race took place, and an unsorted set of map
+                                                                    // with horses names as values.
+
+horsesTest.printMap();                                            // prints the horsesmap 
+
+horsesTest.printMapValue(2017);                                   // prints the names of horses for Grand National in 2017
+
+horsesTest.printMapValue(2018);                                   // prints a statement that the data is not found 
+                                                                   //  for a year that is not in the Map
+
+Set<String>horsesNames = new HashSet<>();                         // creates a set horsesNames
+horsesNames.add("One for Arthur");                                // adds a horse's name to the set horsesNames
+horsesNames.add("Pleasant Company");                              // adds a horse's name
+horsesTest.addMapEntry(2017, horsesNames);    
+horsesTest.addMapEntry(2018, horsesNames);    
+horsesTest.deleteEntry(2017); // removes the race year 2017 from the map together with names of horses
+                              //   which run that year and returns true
+horsesTest.deleteEntry(2019); // returns false for the race year 2018 which does not exist in the map
+
+horsesTest.selectKeys("Shutthefrontdoor"); // Returns all race years when a horse with a name Shutthefrontdoor
+                                           //  run in the race
+                                              
+horsesTest.addValue(2016, "Vicente");   
+horsesTest.deleteValue(2016, "Vicente");
